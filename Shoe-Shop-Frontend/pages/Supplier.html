@@ -13,6 +13,8 @@
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../assets/css/pages/supplier.css" rel="stylesheet" />
+
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
@@ -91,11 +93,6 @@
 
         </ul>
     </div>
-    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-        <div class="mx-3">
-            <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-        </div>
-    </div>
 </aside>
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
@@ -107,7 +104,113 @@
     <!--Content Start-->
     <div class="container-fluid py-4">
         <div class="row mt-4">
-            <h1>Hello</h1>
+            <div class="container">
+
+                <form class="row g-3 p-3 ">
+                    <div class="details personal">
+                        <span class="title">Supplier Details</span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Supplier Code</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Supplier Code" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Supplier Name</label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enter Supplier Node" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputPassword4" class="form-label">Category</label>
+                        <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Category">
+                    </div>
+
+                    <div class="details personal">
+                        <span class="title">Address Details</span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Building NO</label>
+                        <input type="text" class="form-control"  placeholder="Enter Building NO" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Lane</label>
+                        <input type="text" class="form-control"  placeholder="Enter Lane" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Main City</label>
+                        <input type="text" class="form-control"  placeholder="Enter Main City" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Main State</label>
+                        <input type="text" class="form-control"  placeholder="Enter Main State" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control"  placeholder="Enter Postal Code" required>
+                    </div>
+
+                    <div class="details personal">
+                        <span class="title">Contact Details</span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control"  placeholder="Enter Mobile Number" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Landline Number</label>
+                        <input type="text" class="form-control"  placeholder="Enter Landline Number" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Email</label>
+                        <input type="text" class="form-control"  placeholder="Enter Email" required>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex my-5">
+                        <button id="supplierdatasave" class="btn btn-outline-primary me-md-2" type="button">Save</button>
+                        <button id="supplierdataupdate" class="btn btn-outline-warning" type="button">Update</button>
+                        <button id="supplierdatadelete" class="btn btn-outline-danger" type="button">Delete</button>
+                        <button id="supplieralldataget" class="btn btn-outline-success" type="button">Get All</button>
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="suppliertable">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Supplier_Code</th>
+                            <th scope="col">Supplier_Name</th>
+                            <th scope="col">Sale(LKR)</th>
+                            <th scope="col">Buy(LKR)</th>
+                            <th scope="col">Profit</th>
+                            <th scope="col">Profit_Margin</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>S001</td>
+                            <td>Manith</td>
+                            <td>Manith</td>
+                            <td>08</td>
+                            <td>galle</td>
+                            <td>matara</td>
+                            <td>State</td>
+                            <td>9</td>
+                            <td>0713988628</td>
+                            <td>0412237359</td>
+                            <td>lakshan@gmail.com</td>
+
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
         </div>
         <footer class="footer py-4  ">
             <div class="container-fluid">

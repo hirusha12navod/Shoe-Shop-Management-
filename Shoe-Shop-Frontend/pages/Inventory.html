@@ -13,6 +13,7 @@
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../assets/css/pages/item.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
@@ -91,11 +92,7 @@
 
         </ul>
     </div>
-    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-        <div class="mx-3">
-            <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-        </div>
-    </div>
+
 </aside>
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
@@ -107,7 +104,144 @@
     <!--Content Start-->
     <div class="container-fluid py-4">
         <div class="row mt-4">
-            <h1>Hello</h1>
+            <div class="container fw-bold">
+                <div>
+                    <form class="row g-3 p-3 ">
+                        <div class="details personal">
+                            <h1>Inventory Form</h1>
+                        </div>
+
+                        <div class="row col-12">
+                            <div class="form col-md-4">
+                                <div class="grid">
+                                    <div class="form-element">
+                                        <input type="file" id="file-1" accept="image/*" required>
+                                        <label for="file-1" id="file-1-preview">
+                                            <img src="https://bit.ly/3ubuq5o" alt="" >
+                                            <div>
+                                                <span>+</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row col-md-8">
+                                <div class="col-md-6">
+                                    <label  class="form-label">Item Code</label>
+                                    <input type="text" class="form-control" id="inventorycode" placeholder="Enter Item Code" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label  class="form-label">Item Description</label>
+                                    <input type="text" class="form-control" id="inventorydescription" placeholder="Enter Description" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label  class="form-label">Category</label>
+                                    <input type="text" class="form-control"  id="inventorycategory" placeholder="Enter Category" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label  class="form-label">Size</label>
+                                    <input type="text" class="form-control" id="inventorysize" placeholder="Enter Size" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label  class="form-label">Item Quantity</label>
+                                    <input type="number" class="form-control"  placeholder="Enter Quantity" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inventorysuppliercode" class="form-label">Supplier Code</label>
+                                    <select id="inventorysuppliercode" class="form-select">
+                                        <option selected>Select Code</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row g-md-3">
+                                <div class="col-md-4">
+                                    <label for="inventorysuppliername" class="form-label">Supplier Name</label>
+                                    <select id="inventorysuppliername" class="form-select">
+                                        <option selected>Select Name</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label  class="form-label">Unit Price - Sale</label>
+                                    <input type="number" class="form-control" id="inventorysaleprice" placeholder="Enter Sale" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label  class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="inventoryquantity" placeholder="Enter Quantity" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label  class="form-label">Expected Profit</label>
+                                    <input type="number" class="form-control"  id="inventoryexpectedprofit" placeholder="Enter Profit" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Profit Margin</label>
+                                    <input type="text" class="form-control" id="inventoryprofitmargin"  placeholder="Enter Profit Margin" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inventorystatus" class="form-label">Status</label>
+                                    <select id="inventorystatus" class="form-select">
+                                        <option selected>Select Status</option>
+                                        <option>Low</option>
+                                        <option>Available</option>
+                                        <option>Not Available</option>
+                                    </select>
+                                </div>
+
+                                <div class="d-grid gap-2 d-md-flex my-5">
+                                    <button id="inventorydatasave" class="btn btn-outline-primary me-md-2" type="submit">Save</button>
+                                    <button id="inventorydataupdate" class="btn btn-outline-warning" type="button">Update</button>
+                                    <button id="inventorydatadelete" class="btn btn-outline-danger" type="button">Delete</button>
+                                    <button id="inventoryalldataget" class="btn btn-outline-success" type="button">Get All</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="search">
+                            <input type="text" id="search" class="search-input" placeholder="Search Employee Here...">
+                            <button id="customerdataget" class="btn btn-outline-success" type="button">Get</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="inventorytable">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Size</th>
+                                    <th scope="col">QTY</th>
+                                    <th scope="col">Supplier Code</th>
+                                    <th scope="col">Supplier Name</th>
+                                    <th scope="col">Unit Price - Sale</th>
+                                    <th scope="col">Expected Profit</th>
+                                    <th scope="col">Profit Margin</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <!--            <th scope="row">1</th>-->
+                                    <td>C001</td>
+                                    <td>Nike</td>
+                                    <td>male</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                    <td>8627</td>
+                                    <td>Nike</td>
+                                    <td>1200.00</td>
+                                    <td>qweqwe</td>
+                                    <td>qweqwe</td>
+                                    <td>good</td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
         </div>
         <footer class="footer py-4  ">
             <div class="container-fluid">

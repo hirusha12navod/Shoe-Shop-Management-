@@ -91,11 +91,6 @@
 
         </ul>
     </div>
-    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-        <div class="mx-3">
-            <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-        </div>
-    </div>
 </aside>
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
@@ -107,7 +102,122 @@
     <!--Content Start-->
     <div class="container-fluid py-4">
         <div class="row mt-4">
-            <h1>Hello</h1>
+            <div class="container">
+
+                <form class="row g-3 p-3 ">
+                    <div class="details personal">
+                        <span class="title">Sales Details</span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Item Code</label>
+                        <select  class="form-select">
+                            <option selected>Select Code</option>
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Order No</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Order No" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Customer Name</label>
+                        <select  class="form-select">
+                            <option selected>Select Customer</option>
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Item DESC</label>
+                        <select  class="form-select">
+                            <option selected>Select DESC</option>
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Size</label>
+                        <input type="text" class="form-control"  placeholder="Enter Size" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Unit Price</label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enter Unit Price" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Item QTY</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Select QTY</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputEmail4" class="form-label">Total Price</label>
+                        <input type="text" class="form-control" placeholder="Enter Total Price">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputEmail4" class="form-label">Purchase date</label>
+                        <input type="date" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Payment method</label>
+                        <select id="#" class="form-select">
+                            <option disabled selected>Payment method</option>
+                            <option>Cash</option>
+                            <option>Credit Card</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputPassword4" class="form-label">Add points</label>
+                        <input type="number" class="form-control" id="inputPassword4" placeholder="Enter Points">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputCity" class="form-label">Cashier Name</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Enter Cashier Name">
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex my-5">
+                        <button id="saledatasave" class="btn btn-outline-primary me-md-2" type="button">Save</button>
+                        <button id="saledataupdate" class="btn btn-outline-warning" type="button">Update</button>
+                        <button id="saledatadelete" class="btn btn-outline-danger" type="button">Delete</button>
+                        <button id="salealldataget" class="btn btn-outline-success" type="button">Get All</button>
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Order No</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Item DESC</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">QTY</th>
+                            <th scope="col">Total Price</th>
+                            <th scope="col">Purchase date</th>
+                            <th scope="col">Payment method</th>
+                            <th scope="col">Points</th>
+                            <th scope="col">Cashier name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+<!--                                        <th scope="row">1</th>-->
+                            <td>C001</td>
+                            <td>D001</td>
+                            <td>Lakshan</td>
+                            <td>19</td>
+                            <td>09</td>
+                            <td>1800.00</td>
+                            <td>2</td>
+                            <td>3600.00</td>
+                            <td>04/24</td>
+                            <td>Cash</td>
+                            <td>03</td>
+                            <td>Rashmika</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         <footer class="footer py-4  ">
             <div class="container-fluid">
