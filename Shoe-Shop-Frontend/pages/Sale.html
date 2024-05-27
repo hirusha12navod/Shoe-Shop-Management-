@@ -13,6 +13,8 @@
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../assets/css/pages/sale.css" rel="stylesheet" />
+
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
@@ -108,80 +110,90 @@
                     <div class="details personal">
                         <span class="title">Sales Details</span>
                     </div>
-                    <div class="col-md-4">
+                    <!--<div class="col-md-4">
                         <label for="inputState" class="form-label">Item Code</label>
                         <select  class="form-select">
                             <option selected>Select Code</option>
                             <option></option>
                         </select>
-                    </div>
+                    </div>-->
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Order No</label>
-                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Order No" required>
+                        <input type="text" class="form-control saleorderno" id="validationDefault01" placeholder="Enter Order No" required>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Customer Name</label>
-                        <select  class="form-select">
+                        <label for="validationDefault" class="form-label">Customer Name</label>
+                        <!--<select  class="form-select">
                             <option selected>Select Customer</option>
                             <option></option>
-                        </select>
+                        </select>-->
+                        <input type="text" class="form-control salecustomername" id="validationDefault" placeholder="Enter Order No" required>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Item DESC</label>
-                        <select  class="form-select">
+                        <label  class="form-label">Item DESC</label>
+                        <!--<select  class="form-select ">
                             <option selected>Select DESC</option>
                             <option></option>
-                        </select>
+                        </select>-->
+                        <input type="text" class="form-control saleitemdescription"  placeholder="Item Desc" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault02" class="form-label">Size</label>
-                        <input type="text" class="form-control"  placeholder="Enter Size" required>
+                        <input type="text" class="form-control saleitemsize"  placeholder="Enter Size" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault02" class="form-label">Unit Price</label>
-                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enter Unit Price" required>
+                        <input type="text" class="form-control saleunitprice" id="validationDefault02" placeholder="Enter Unit Price" required>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Item QTY</label>
-                        <select id="inputState" class="form-select">
+                        <label for="validationDefault03" class="form-label">Item QTY</label>
+                        <!--<select id="inputState" class="form-select">
                             <option selected>Select QTY</option>
-                        </select>
+                        </select>-->
+                        <input type="text" class="form-control saleitemqty" id="validationDefault03" placeholder="Enter Unit Price" required>
+
                     </div>
                     <div class="col-md-4">
                         <label for="inputEmail4" class="form-label">Total Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Total Price">
+                        <input type="text" class="form-control saletotalprice" placeholder="Enter Total Price">
                     </div>
                     <div class="col-md-4">
                         <label for="inputEmail4" class="form-label">Purchase date</label>
-                        <input type="date" class="form-control" id="inputEmail4">
+                        <input type="date" class="form-control salepurchasedate" id="inputEmail4">
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Payment method</label>
-                        <select id="#" class="form-select">
+                        <label  class="form-label">Payment method</label>
+                        <select id="#" class="form-select salepayementmethod">
                             <option disabled selected>Payment method</option>
-                            <option>Cash</option>
+                            <option>CASH</option>
                             <option>Credit Card</option>
                         </select>
                     </div>
                     <div class="col-md-4">
                         <label for="inputPassword4" class="form-label">Add points</label>
-                        <input type="number" class="form-control" id="inputPassword4" placeholder="Enter Points">
+                        <input type="number" class="form-control salepoints" id="inputPassword4" placeholder="Enter Points">
                     </div>
                     <div class="col-md-4">
                         <label for="inputCity" class="form-label">Cashier Name</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="Enter Cashier Name">
+                        <input type="text" class="form-control salecashiername" id="inputCity" placeholder="Enter Cashier Name">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputPassword4" class="form-label">Item Code</label>
+                        <input type="text" class="form-control saleitemcode" id="inputPassword5" placeholder="Enter Points">
                     </div>
 
                     <div class="d-grid gap-2 d-md-flex my-5">
-                        <button id="saledatasave" class="btn btn-outline-primary me-md-2" type="button">Save</button>
-                        <button id="saledataupdate" class="btn btn-outline-warning" type="button">Update</button>
-                        <button id="saledatadelete" class="btn btn-outline-danger" type="button">Delete</button>
-                        <button id="salealldataget" class="btn btn-outline-success" type="button">Get All</button>
+                        <button  class="btn btn-outline-primary me-md-2 saledatasave" type="button">Save</button>
+                        <button  class="btn btn-outline-warning saledataupdate" type="button">Update</button>
+                        <button  class="btn btn-outline-danger saledatadelete" type="button">Delete</button>
+                        <button  class="btn btn-outline-success salealldataget" type="button">Get All</button>
+                        <button  class="btn btn-outline-success saledataget" type="button">Get One</button>
+                        <button  class="btn btn-outline-success saleinventoryaddsave" type="button">Add Item</button>
                     </div>
                 </form>
 
                 <div class="table-responsive">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered saletable">
                         <thead>
                         <tr>
                             <th scope="col">Code</th>
@@ -199,21 +211,25 @@
                         </tr>
                         </thead>
                         <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered saleitemtable">
+                        <thead>
                         <tr>
-<!--                                        <th scope="row">1</th>-->
-                            <td>C001</td>
-                            <td>D001</td>
-                            <td>Lakshan</td>
-                            <td>19</td>
-                            <td>09</td>
-                            <td>1800.00</td>
-                            <td>2</td>
-                            <td>3600.00</td>
-                            <td>04/24</td>
-                            <td>Cash</td>
-                            <td>03</td>
-                            <td>Rashmika</td>
+                            <th scope="col">Code</th>
+                            <th scope="col">Item_Desc</th>
+                            <th scope="col">Unit_Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Remove</th>
                         </tr>
+                        </thead>
+                        <tbody>
+
                         </tbody>
                     </table>
                 </div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Shoe-Shop-Backend.iml" filepath="$PROJECT_DIR$/.idea/Shoe-Shop-Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SHOE-SHOP-Web-App-BackEnd-master/shoeshop.iml" filepath="$PROJECT_DIR$/SHOE-SHOP-Web-App-BackEnd-master/shoeshop.iml" />
+    </modules>
+  </component>
+</project>

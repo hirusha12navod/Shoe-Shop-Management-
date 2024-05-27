@@ -107,16 +107,19 @@
                 <div>
                     <form class="row g-3 p-3 ">
                         <div class="details personal">
-                            <h1>Employee Form</h1>
+                            <span class="title">Employee Details</span>
                         </div>
 
                         <div class="row col-12">
                             <div class="form col-md-4">
                                 <div class="grid">
                                     <div class="form-element">
-                                        <input type="file" id="file-1" accept="image/*" required>
-                                        <label for="file-1" id="file-1-preview">
-                                            <img src="https://bit.ly/3ubuq5o" alt="" >
+                                        <input type="file" id="file-input" class="employeeimage" accept="image/*" required>
+                                        <label for="file-input" id="file-1-preview">
+                                            <div id="image-preview">
+                                                <img class="employeeimgpreview" src="" alt="">
+                                                <img class="employeedefaultimg" src="" alt="">
+                                            </div>
                                             <div>
                                                 <span>+</span>
                                             </div>
@@ -124,54 +127,55 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row col-md-8">
                                 <div class="col-md-6">
                                     <label  class="form-label">Employee Code</label>
-                                    <input type="text" class="form-control" id="employeecode" placeholder="Enter Your Code" required>
+                                    <input type="text" class="form-control employeecode"   placeholder="Enter Your Code" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label  class="form-label">Employee name</label>
-                                    <input type="text" class="form-control" id="employeename"  placeholder="Enter Your Name" required>
+                                    <input type="text" class="form-control employeename" id="employeename"  placeholder="Enter Your Name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="employeegender" class="form-label">Gender</label>
-                                    <select id="employeegender" class="form-select">
+                                    <select id="employeegender" class="form-select employeegender">
                                         <option selected>Select gender</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
+                                        <option value="1">MALE</option>
+                                        <option value="2">FEMALE</option>
+                                        <option value="3">ORHERS</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="employeestatus" class="form-label">Status</label>
-                                    <select  id="employeestatus" class="form-select">
+                                    <select  id="employeestatus" class="form-select employeestatus">
                                         <option selected>Select Status</option>
-                                        <option>Married</option>
-                                        <option>Unmarried</option>
+                                        <option value="1">Married</option>
+                                        <option value="2">Unmarried</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
                                     <label  class="form-label">Designation</label>
-                                    <input type="text" class="form-control"  id="employeedesignation" placeholder="Enter Designation" required>
+                                    <input type="text" class="form-control employeedesignation"  id="employeedesignation" placeholder="Enter Designation" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label  class="form-label">Access Role</label>
-                                    <input type="text" class="form-control" id="employeerole" placeholder="Enter Access Role" required>
+                                    <input type="text" class="form-control employeerole" id="employeerole" placeholder="Enter Access Role" required>
                                 </div>
                             </div>
 
                             <div class="row g-md-3">
                                 <div class="col-4">
                                     <label for="employeedob" class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-control" id="employeedob" placeholder="1234 Main St">
+                                    <input type="date" class="form-control employeedob" id="employeedob" placeholder="1234 Main St">
                                 </div>
                                 <div class="col-4">
                                     <label for="employeejoindate" class="form-label">Date of Join</label>
-                                    <input type="date" class="form-control" id="employeejoindate"  placeholder="1234 Main St">
+                                    <input type="date" class="form-control employeejoindate" id="employeejoindate"  placeholder="1234 Main St">
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Attached Branch</label>
-                                    <input type="text" class="form-control" id="employeebranch" placeholder="Enter Attached Branch" required>
+                                    <input type="text" class="form-control employeebranch" id="employeebranch" placeholder="Enter Attached Branch" required>
                                 </div>
 
                                 <div class="details personal">
@@ -179,23 +183,23 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Building NO</label>
-                                    <input type="text" class="form-control" id="employeeaddressLine01"  placeholder="Enter Building NO" required>
+                                    <input type="text" class="form-control employeeaddressLine01" id="employeeaddressLine01"  placeholder="Enter Building NO" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Lane</label>
-                                    <input type="text" class="form-control"  id="employeeaddressLine02" placeholder="Enter Lane" required>
+                                    <input type="text" class="form-control employeeaddressLine02"  id="employeeaddressLine02" placeholder="Enter Lane" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Main City</label>
-                                    <input type="text" class="form-control" id="employeeaddressLine03"  placeholder="Enter Main City" required>
+                                    <input type="text" class="form-control employeeaddressLine03" id="employeeaddressLine03"  placeholder="Enter Main City" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Main State</label>
-                                    <input type="text" class="form-control" id="employeeaddressLine04"  placeholder="Enter Main State" required>
+                                    <input type="text" class="form-control employeeaddressLine04" id="employeeaddressLine04"  placeholder="Enter Main State" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Postal Code</label>
-                                    <input type="text" class="form-control" id="employeeaddressLine05"  placeholder="Enter Postal Code" required>
+                                    <input type="text" class="form-control employeeaddressLine05" id="employeeaddressLine05"  placeholder="Enter Postal Code" required>
                                 </div>
 
                                 <div class="details personal">
@@ -203,56 +207,58 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Contact Number</label>
-                                    <input type="text" class="form-control"  id="employeecontactno" placeholder="Enter Contact Number" required>
+                                    <input type="text" class="form-control employeecontactno"  id="employeecontactno" placeholder="Enter Contact Number" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control" id="employeeemail" placeholder="Enter Email" required>
+                                    <input type="text" class="form-control employeeemail" id="employeeemail" placeholder="Enter Email" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">MInform in Case of Emergency</label>
-                                    <input type="text" class="form-control"  id="employeeinformincaseofEmergency" placeholder="Enter Emergency" required>
+                                    <input type="text" class="form-control employeeinformincaseofEmergency"  id="employeeinformincaseofEmergency" placeholder="Enter Emergency" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label  class="form-label">Emergency Contact</label>
-                                    <input type="text" class="form-control"  id="emergencycontact" placeholder="Enter Emergency Contact" required>
+                                    <input type="text" class="form-control emergencycontact"  id="emergencycontact" placeholder="Enter Emergency Contact" required>
                                 </div>
 
                                 <div class="d-grid gap-2 d-md-flex my-5">
-                                    <button id="employeedatasave" class="btn btn-outline-primary me-md-2" type="submit">Save</button>
-                                    <button id="employeedataupdate" class="btn btn-outline-warning" type="button">Update</button>
-                                    <button id="employeedatadelete" class="btn btn-outline-danger" type="button">Delete</button>
-                                    <button id="employeealldataget" class="btn btn-outline-success" type="button">Get All</button>
+                                    <button  class="btn btn-outline-primary me-md-2 employeedatasave" type="submit">Save</button>
+                                    <button  class="btn btn-outline-warning employeedataupdate" type="button">Update</button>
+                                    <button  class="btn btn-outline-danger employeedatadelete" type="button">Delete</button>
+                                    <button  class="btn btn-outline-success employeealldataget" type="button">Get All</button>
+                                    <button  class="btn btn-outline-success employeedataget" type="button">Get One</button>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="search">
-                            <input type="text" id="search" class="search-input" placeholder="Search Employee Here...">
-                            <button id="customerdataget" class="btn btn-outline-success" type="button">Get</button>
-                        </div>
+
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="employeetable">
+                            <table class="table table-bordered employeetable" id="employeetable">
                                 <thead>
                                 <tr>
                                     <th scope="col">Code</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Gender</th>
-                                    <th scope="col">Join Date</th>
-                                    <th scope="col">Level</th>
-                                    <th scope="col">Points</th>
-                                    <th scope="col">DOB</th>
-                                    <th scope="col">Contact No</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Building NO</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Designation</th>
+                                    <th scope="col">Role</th>
+                                    <th scope="col">Date_Of_Birth</th>
+                                    <th scope="col">Joined_Date</th>
+                                    <th scope="col">Branch</th>
+                                    <th scope="col">Building</th>
                                     <th scope="col">Lane</th>
                                     <th scope="col">City</th>
                                     <th scope="col">State</th>
-                                    <th scope="col">Postal Code</th>
+                                    <th scope="col">Postal_Code</th>
+                                    <th scope="col">Number</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Case_of_Emer.</th>
+                                    <th scope="col">Emergency</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
+                                <!--<tr>
                                     <td>C001</td>
                                     <td>Manith</td>
                                     <td>male</td>
@@ -267,7 +273,7 @@
                                     <td>matara</td>
                                     <td>State</td>
                                     <td>9</td>
-                                </tr>
+                                </tr>-->
                                 </tbody>
                             </table>
                         </div>

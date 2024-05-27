@@ -21,6 +21,187 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+    <style>
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsive row and column styles */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-4 {
+            padding: 15px;
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Input and select styles */
+        input[type="text"], input[type="date"], input[type="datetime-local"], .form-select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #495057;
+        }
+
+        input[type="text"]::placeholder, input[type="date"]::placeholder, input[type="datetime-local"]::placeholder {
+            color: #adb5bd;
+        }
+
+        /* Focus styles */
+        input[type="text"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, .form-select:focus {
+            border-color: #007bff; /* Change border color on focus */
+            background-color: #e9f5ff; /* Change background color on focus */
+            color: #343a40; /* Change text color on focus */
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a blue shadow */
+        }
+
+        /* Select styles */
+        .form-select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="#495057" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 10px;
+        }
+
+        .form-select:focus {
+            border-color: #007bff; /* Change border color on focus */
+            background-color: #e9f5ff; /* Change background color on focus */
+            color: #343a40; /* Change text color on focus */
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a blue shadow */
+        }
+
+        .form-select option {
+            color: #495057;
+        }
+
+        /* Button styles */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .btn-outline-warning {
+            color: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .btn-outline-warning:hover {
+            background-color: #ffc107;
+            color: #fff;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-outline-danger:hover {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-outline-success {
+            color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        /* Table styles */
+        .table-responsive {
+            margin-top: 30px;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            background-color: #fff;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            padding: 12px 15px;
+            border: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Label and heading styles */
+        h6 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .form-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Adjust button spacing */
+        .d-grid .btn {
+            margin-bottom: 10px;
+        }
+
+        .d-md-flex .btn {
+            margin-right: 10px;
+        }
+
+        /* Details section styles */
+        .details .title {
+            font-size: 20px;
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
@@ -112,15 +293,20 @@
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Supplier Code</label>
-                        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Supplier Code" required>
+                        <input type="text" class="form-control suppliercode" id="validationDefault01" placeholder="Enter Supplier Code" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault02" class="form-label">Supplier Name</label>
-                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enter Supplier Node" required>
+                        <input type="text" class="form-control suppliername" id="validationDefault02" placeholder="Enter Supplier Node" required>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputPassword4" class="form-label">Category</label>
-                        <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Category">
+                        <label for="inputPassword4" class="form-label labelfont">Category</label>
+                        <select class="form-select inputfont suppliercategory"id="inputPassword4" aria-label="Default select example">
+                            <option class="selectedfont" selected>Select Category</option>
+                            <option class="selectedfont" value="1">LOCAL</option>
+                            <option class="selectedfont" value="2">INTERNATIONAL</option>
+                        </select>
+
                     </div>
 
                     <div class="details personal">
@@ -128,23 +314,27 @@
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Building NO</label>
-                        <input type="text" class="form-control"  placeholder="Enter Building NO" required>
+                        <input type="text" class="form-control supplieraddress01"  placeholder="Enter Building NO" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault02" class="form-label">Lane</label>
-                        <input type="text" class="form-control"  placeholder="Enter Lane" required>
+                        <input type="text" class="form-control supplieraddress02"  placeholder="Enter Lane" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Main City</label>
-                        <input type="text" class="form-control"  placeholder="Enter Main City" required>
+                        <input type="text" class="form-control supplieraddress03"  placeholder="Enter Main City" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault02" class="form-label">Main State</label>
-                        <input type="text" class="form-control"  placeholder="Enter Main State" required>
+                        <input type="text" class="form-control supplieraddress04"  placeholder="Enter Main State" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Postal Code</label>
-                        <input type="text" class="form-control"  placeholder="Enter Postal Code" required>
+                        <input type="text" class="form-control supplieraddress05"  placeholder="Enter Postal Code" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Country</label>
+                        <input type="text" class="form-control supplieraddress06"  placeholder="Enter Country" required>
                     </div>
 
                     <div class="details personal">
@@ -152,45 +342,46 @@
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Mobile Number</label>
-                        <input type="text" class="form-control"  placeholder="Enter Mobile Number" required>
+                        <input type="text" class="form-control suppliercontactnumber"  placeholder="Enter Mobile Number" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault02" class="form-label">Landline Number</label>
-                        <input type="text" class="form-control"  placeholder="Enter Landline Number" required>
+                        <input type="text" class="form-control supplierlandlinenumber"  placeholder="Enter Landline Number" required>
                     </div>
                     <div class="col-md-4">
                         <label for="validationDefault01" class="form-label">Email</label>
-                        <input type="text" class="form-control"  placeholder="Enter Email" required>
+                        <input type="text" class="form-control supplieremail"  placeholder="Enter Email" required>
                     </div>
 
                     <div class="d-grid gap-2 d-md-flex my-5">
-                        <button id="supplierdatasave" class="btn btn-outline-primary me-md-2" type="button">Save</button>
-                        <button id="supplierdataupdate" class="btn btn-outline-warning" type="button">Update</button>
-                        <button id="supplierdatadelete" class="btn btn-outline-danger" type="button">Delete</button>
-                        <button id="supplieralldataget" class="btn btn-outline-success" type="button">Get All</button>
+                        <button  class="btn btn-outline-primary me-md-2 supplierdatasave" type="button">Save</button>
+                        <button  class="btn btn-outline-warning supplierdataupdate" type="button">Update</button>
+                        <button  class="btn btn-outline-danger supplierdatadelete" type="button">Delete</button>
+                        <button  class="btn btn-outline-success supplieralldataget" type="button">Get All</button>
+                        <button  class="btn btn-outline-success supplierdataget" type="button">Get All</button>
                     </div>
                 </form>
 
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="suppliertable">
+                    <table class="table table-bordered suppliertable" id="suppliertable">
                         <thead>
                         <tr>
                             <th scope="col">Code</th>
-                            <th scope="col">Description</th>
+                            <th scope="col">Name</th>
                             <th scope="col">Category</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Supplier_Code</th>
-                            <th scope="col">Supplier_Name</th>
-                            <th scope="col">Sale(LKR)</th>
-                            <th scope="col">Buy(LKR)</th>
-                            <th scope="col">Profit</th>
-                            <th scope="col">Profit_Margin</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Building_No</th>
+                            <th scope="col">Lane</th>
+                            <th scope="col">City</th>
+                            <th scope="col">State</th>
+                            <th scope="col">Postal_Code</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Contact_Number</th>
+                            <th scope="col">Land_Line_Number</th>
+                            <th scope="col">Email</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <!--<tr>
                             <td>S001</td>
                             <td>Manith</td>
                             <td>Manith</td>
@@ -204,12 +395,10 @@
                             <td>lakshan@gmail.com</td>
 
 
-                        </tr>
+                        </tr>-->
                         </tbody>
                     </table>
                 </div>
-
-
             </div>
         </div>
         <footer class="footer py-4  ">
