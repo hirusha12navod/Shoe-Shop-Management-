@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Hirusha, Hirusha Projects, Best Web Application, Spring Web Application, Invoicing Web Application , Vortex">
+    <meta name="description" content="SHOE SHOP Management Enterprice Level Web Application.">
+    <meta name="owner" content="Hirusha Navod">
+    <meta name="author" content="Hirusha Navod">
+    <meta name="theme-color" content="red">
+    <meta name="robots" content="index,follow">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/framework/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/style/dashbord/DashBoard.css">
+    <link rel="stylesheet" href="assets/style/employeeform/EmployeeForm.css">
+    <link rel="stylesheet" href="assets/style/inventoryform/InventoryForm.css">
+    <link rel="stylesheet" href="assets/style/supplierform/SupplierForm.css">
+    <link rel="stylesheet" href="assets/style/customerform/CustomerForm.css">
+    <link rel="stylesheet" href="assets/style/saleform/SaleForm.css">
+    <link rel="stylesheet" href="assets/style/userform/UserForm.css">
+    <link rel="stylesheet" href="assets/style/profilechangedbox/ProfileChangedForm.css">
+    <link rel="stylesheet" href="assets/style/paymentform/PaymentForm.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dongle&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header class="d-flex">
+        <div class="d-flex justify-content-between col-11">
+            <div class="d-flex align-items-center justify-content-between searchside">
+                <i class="fa fa-search fa-lg searchicon" aria-hidden="true"></i>
+                <h5 class="taptosearch">Tap to search</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between headerightside">
+                <div class="notification">
+                    <img src="assets/img/DashBoard/nothing notification.png" alt="notification">
+                </div>
+                <div class="d-flex justify-content-between align-items-center profilepictures">
+                    <button class="d-flex flex-wrap justify-content-center profileicon">
+                        <img src="assets/img/DashBoard/default_men_profile_pictures.png" alt="default profile pic">
+                    </button>
+                    <div class="d-flex flex-wrap profiledetails">
+                        <h5>Hirusha Navod</h5>
+                        <h5>Sales Admin</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="leftside d-flex align-items-end justify-content-center">
+            <div class="col-10 leftsidemaindiv">
+                <div class="d-flex align-items-center mylogo">
+                    <img src="assets/img/DashBoard/mylogo.png" alt="">
+                    <h5>VORTEX</h5>
+                </div>
+                <div class="col-12 d-flex flex-wrap justify-content-center menubuttoncontainer">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center homebutton">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <div>
+                            <span>Home</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center customerbutton">
+                        <i class="bi bi-people-fill"></i>
+                        <div>
+                            <span>Customer</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center employeebutton">
+                        <i class="bi bi-person-badge"></i>
+                        <div>
+                            <span>Employee</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center supplierbutton">
+                        <i class="bi bi-person-lines-fill"></i>
+                        <div>
+                            <span>Supplier</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center inventorybutton">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                        <div>
+                            <span>Inventory</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center salesbutton">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <div>
+                            <span>Sale</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center userbutton">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <div>
+                            <span>User</span>
+                        </div>
+                    </button>
+
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center logoutbutton">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <div>
+                            <span>Logout</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="rightside">
+            <div class="col-12 rightsidemaincontainer">
+                <div class="d-flex managedetails align-items-center">
+                    <div class="col-3">
+                        <div class="col-12 d-flex align-items-center">
+                            <img src="assets/img/DashBoard/revenue.png" alt="revenue">
+                            <h5>Total Revenue</h5>
+                        </div>
+                        <div class="col-12 d-flex revenuedetails">
+                            <div class="d-flex">
+                                <h4>LKR</h4>
+                                <h4>10K</h4>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <i class="bi bi-graph-down-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="col-12 d-flex align-items-center">
+                            <img src="assets/img/DashBoard/employee.png" alt="">
+                            <h5>Employee</h5>
+                        </div>
+                        <div class="col-12 d-flex employeedetails">
+                            <div class="d-flex">
+                                <h4>100</h4>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <h4>50</h4>
+                                <i class="bi bi-arrow-up-right"></i>
+                                <i class="bi bi-arrow-down-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="col-12 d-flex align-items-center">
+                            <img src="assets/img/DashBoard/user.png" alt="">
+                            <h5>Supplier</h5>
+                        </div>
+                        <div class="col-12 d-flex supplierdetails">
+                            <div class="d-flex">
+                                <h4>60</h4>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <h4>10</h4>
+                                <i class="bi bi-arrow-up-right"></i>
+                                <i class="bi bi-arrow-down-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="col-12 d-flex align-items-center">
+                            <img src="assets/img/DashBoard/loyalaty.png" alt="">
+                            <h5>Loyalaty</h5>
+                        </div>
+                        <div class="col-12 d-flex loyalatydetails">
+                            <div class="d-flex">
+                                <h4>67%</h4>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <h4>1%</h4>
+                                <i class="bi bi-arrow-up-right"></i>
+                                <i class="bi bi-arrow-down-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex chartanddetailscontainer justify-content-between">
+                    <div class="col-8 d-flex justify-content-center align-items-center chart">
+                        <div class="col-11">
+                            <h4>Monthly Revenue</h4>
+                            <div>
+                                <div class="d-flex">
+                                    <h4>LKR</h4>
+                                    <h4 class="monthlyrevenue">100,000</h4>
+                                </div>
+                            </div>
+                            <div class="col-12 barchartcontainer">
+                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mostsaleshoedetails" style="background-color: white;">
+                        <div>
+                            <img src="assets/img/DashBoard/cardback.png" alt="cardback">
+                            <div>
+                                <img src="assets/img/DashBoard/Nike-Logo.png" alt="">
+                                <img class="dashboardmostsaleshoepictures" src="assets/img/DashBoard/defaultnikeshoes.png" alt="nikeshoe">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center shoedetails">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Most sale</h4>
+                                </div>
+                                <table class="table mostsaleshoedetailstable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Desc</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price(LKR)</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SH001</th>
+                                        <td>NIKE</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>2500.00</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SH001</th>
+                                        <td>ADIDAS</td>
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td>2500.00</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex employeeandsupplierdetailscontainer">
+                    <div class="col-4" style="background-color: white;">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="col-10 birthdaydetailscontainer">
+                                <h4>BirthDays</h4>
+                                <div class="employeecontainer">
+                                    <div class="d-flex">
+                                        <div>
+                                            <div>
+                                                <img src="assets/img/DashBoard/employee.png" alt="employee">
+                                            </div>
+                                            <div class="spaceline"></div>
+                                        </div>
+                                        <div class="birthdaydetails">
+                                            <h4>Theekshana De Silva</h4>
+                                            <h4>EMP003</h4>
+                                            <div class="d-flex justify-content-center daytoday align-items-center">
+                                                <h4>Today</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div>
+                                            <div>
+                                                <img src="assets/img/DashBoard/employee.png" alt="employee">
+                                            </div>
+                                            <div class="spaceline"></div>
+                                        </div>
+                                        <div class="birthdaydetails">
+                                            <h4>Hirusha Navod</h4>
+                                            <h4>EMP003</h4>
+                                            <div class="d-flex justify-content-center daytoday align-items-center">
+                                                <h4>Today</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div>
+                                            <div>
+                                                <img src="assets/img/DashBoard/employee.png" alt="employee">
+                                            </div>
+                                            <div class="spaceline"></div>
+                                        </div>
+                                        <div class="birthdaydetails">
+                                            <h4>Manith Lakvindu</h4>
+                                            <h4>EMP003</h4>
+                                            <div class="d-flex justify-content-center daytoday align-items-center">
+                                                <h4>Today</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="col-10 tablecontainer">
+                                <div class="tableheader">
+                                    <h4>Recent Sales</h4>
+                                </div>
+                                <table class="table recenetsaletable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">SI</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Amount(LKR)</th>
+                                        <th scope="col">Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">27 Apr 2024</th>
+                                        <td>SI001</td>
+                                        <td>Theekshana</td>
+                                        <td>2000.00</td>
+                                        <td class="status">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <h4>PAID</h4>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">27 Apr 2024</th>
+                                        <td>SI002</td>
+                                        <td>Hirusha</td>
+                                        <td>2500.00</td>
+                                        <td class="status">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <h4>PAID</h4>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">27 Apr 2024</th>
+                                        <td>SI003</td>
+                                        <td>Manith</td>
+                                        <td>3000.00</td>
+                                        <td class="status">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <h4>PAID</h4>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center employeeformmaincontainer" style="display: none !important;">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="emplyoeeformtitle">
+                        <h2>Add Employee</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between employeedetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between employeedetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div id="image-preview">
+                                    <img class="employeeimgpreview" src="" alt="">
+                                    <img class="employeedefaultimg" src="assets/img/EmployeeForm/imageupload.png" alt="">
+                                </div>
+                                <input type="file" id="file-input" class="employeeimage" accept="image/*">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Branch</label>
+                                    <input type="email" class="form-control inputfont employeebranch" id="exampleFormControlInput1" placeholder="Enter Attached Branch">
+                                    <div class="error-message employeebranch-error">Invalid branch name</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Status</label>
+                                    <select class="form-select inputfont employeestatus" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Status</option>
+                                        <option class="selectedfont" value="1">MARRIED</option>
+                                        <option class="selectedfont" value="2">UNMARRIED</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Employee Code</label>
+                                    <input type="email" class="form-control inputfont employeecode" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <div class="error-message employeecode-error">Invalid code</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Employee Name</label>
+                                    <input type="email" class="form-control inputfont employeename" id="exampleFormControlInput1" placeholder="Enter Name">
+                                    <div class="error-message employeename-error">Invalid name</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Gender</label>
+                                    <select class="form-select inputfont employeegender" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Gender</option>
+                                        <option class="selectedfont" value="1">MALE</option>
+                                        <option class="selectedfont" value="2">FEMALE</option>
+                                        <option class="selectedfont" value="3">OTHER</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Designation</label>
+                                    <input type="text" class="form-control inputfont employeedesignation" id="exampleFormControlInput1" placeholder="Enter Designation">
+                                    <div class="error-message employeedesignation-error">Invalid designation</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Access Role</label>
+                                    <input type="email" class="form-control inputfont employeerole" id="exampleFormControlInput1" placeholder="Enter Role">
+                                    <div class="error-message employeerole-error">Invalid role</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Date of Birth</label>
+                                    <input type="date" class="form-control inputfont employeedob" id="exampleFormControlInput1" placeholder="Enter Role">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Date of Join</label>
+                                    <input type="date" class="form-control inputfont employeejoindate" id="exampleFormControlInput1" placeholder="Enter Role">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between employeedetailssecondcontainer">
+                            <div class="secondtcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Building No</label>
+                                    <input type="email" class="form-control inputfont employeeaddressLine01" id="exampleFormControlInput1" placeholder="Enter Building No">
+                                    <div class="error-message employeeaddressLine01-error">Invalid building number</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main State</label>
+                                    <input type="email" class="form-control inputfont employeeaddressLine02" id="exampleFormControlInput1" placeholder="Enter Main State">
+                                    <div class="error-message employeeaddressLine02-error">Invalid state</div>
+                                </div>
+                            </div>
+                            <div class="secondtcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Lane</label>
+                                    <input type="email" class="form-control inputfont employeeaddressLine03" id="exampleFormControlInput1" placeholder="Enter Lane">
+                                    <div class="error-message employeeaddressLine03-error">Invalid lane</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Postal Code</label>
+                                    <input type="email" class="form-control inputfont employeeaddressLine04" id="exampleFormControlInput1" placeholder="Enter Postal Code">
+                                    <div class="error-message employeeaddressLine04-error">Invalid postal code</div>
+                                </div>
+                            </div>
+                            <div class="secondtcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main City</label>
+                                    <input type="email" class="form-control inputfont employeeaddressLine05" id="exampleFormControlInput1" placeholder="Enter Main City">
+                                    <div class="error-message employeeaddressLine05-error">Invalid city</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between employeedetailsthirdcontainer">
+                            <div class="thirdcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Contact Number</label>
+                                    <input type="email" class="form-control inputfont employeecontactno" id="exampleFormControlInput1" placeholder="Enter Contact Number">
+                                    <div class="error-message employeecontactno-error">Invalid contact number</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Emergency Contact</label>
+                                    <input type="email" class="form-control inputfont emergencycontact" id="exampleFormControlInput1" placeholder="Enter Emergency Contact">
+                                    <div class="error-message emergencycontact-error">Invalid emergency contact number</div>
+                                </div>
+                            </div>
+                            <div class="thirdcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont employeeemail" id="exampleFormControlInput1" placeholder="Enter Email">
+                                    <div class="error-message employeeemail-error">Invalid email address</div>
+                                </div>
+                            </div>
+                            <div class="thirdcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Inform In Case Of Emergency</label>
+                                    <input type="email" class="form-control inputfont employeeinformincaseofEmergency" id="exampleFormControlInput1" placeholder="Enter Emergency">
+                                    <div class="error-message employeeinformincaseofEmergency-error">Invalid input</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between employeedetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary employeedatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary employeedataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success employeedatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger employeedataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning employeealldataget">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center employeedetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Employee Details</h4>
+                                </div>
+                                <table class="table employeetable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Designation</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Date_Of_Birth</th>
+                                        <th scope="col">Joined_Date</th>
+                                        <th scope="col">Branch</th>
+                                        <th scope="col">Building</th>
+                                        <th scope="col">Lane</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Postal_Code</th>
+                                        <th scope="col">Number</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Case_of_Emer.</th>
+                                        <th scope="col">Emergency</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">IM001</th>
+                                        <td>Theekshana</td>
+                                        <td>MALE</td>
+                                        <td>LOCAL</td>
+                                        <td>Manager</td>
+                                        <td>Admin</td>
+                                        <td>05-02-2003</td>
+                                        <td>05-02-2024</td>
+                                        <td>Galle</td>
+                                        <td>BI001</td>
+                                        <td>Hapugala</td>
+                                        <td>Hapugala</td>
+                                        <td>Hapugala</td>
+                                        <td>80042Wakwella</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana29@gmailcom</td>
+                                        <td>Kasun</td>
+                                        <td>0762656420</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">IM002</th>
+                                        <td>Hirusha</td>
+                                        <td>MALE</td>
+                                        <td>LOCAL</td>
+                                        <td>Manager</td>
+                                        <td>Admin</td>
+                                        <td>05-02-2003</td>
+                                        <td>05-02-2024</td>
+                                        <td>Galle</td>
+                                        <td>BI001</td>
+                                        <td>Hapugala</td>
+                                        <td>Hapugala</td>
+                                        <td>Hapugala</td>
+                                        <td>80042 Wakwella</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana29@gmailcom</td>
+                                        <td>Kasun</td>
+                                        <td>0762656420</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center inventoryformmaincontainer" style="display: none !important;">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="inventoryformtitle">
+                        <h2>Add Inventory</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between inventorydetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between inventorydetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div id="inventory-image-preview">
+                                    <img src="" alt="">
+                                    <img class="inventorydefaultimg" src="assets/img/EmployeeForm/imageupload.png" alt="">
+                                </div>
+                                <input type="file" class="inventoryimage" id="inventory-file-input" accept="image/*">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Buy Price</label>
+                                    <input type="email" class="form-control inputfont inventorybuyprice" id="exampleFormControlInput1" placeholder="Enter Sale Price">
+                                    <div class="error-message inventorybuyprice-error">Invalid buy price</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Sale Price</label>
+                                    <input type="email" class="form-control inputfont inventorysaleprice" id="exampleFormControlInput1" placeholder="Enter Sale Price">
+                                    <div class="error-message inventorysaleprice-error">Invalid sale price</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Profit Margin</label>
+                                    <input type="email" class="form-control inputfont inventoryprofitmargin" id="exampleFormControlInput1" placeholder="Enter Profit Margin">
+                                    <div class="error-message inventoryprofitmargin-error">Invalid profit margin</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Inventory Code</label>
+                                    <input type="email" class="form-control inputfont inventorycode" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <div class="error-message inventorycode-error">Invalid inventory code</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Inventory Description</label>
+                                    <input type="email" class="form-control inputfont inventorydescription" id="exampleFormControlInput1" placeholder="Enter Name">
+                                    <div class="error-message inventorydescription-error">Invalid description</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Quantity</label>
+                                    <input type="email" class="form-control inputfont inventoryquantity" id="exampleFormControlInput1" placeholder="Enter Quantity">
+                                    <div class="error-message inventoryquantity-error">Invalid quantity</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Status</label>
+                                    <select class="form-select inputfont inventorystatus" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Status</option>
+                                        <option class="selectedfont" value="1">Available</option>
+                                        <option class="selectedfont" value="2">Low</option>
+                                        <option class="selectedfont" value="3">Not</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Size</label>
+                                    <input type="email" class="form-control inputfont inventorysize" id="exampleFormControlInput1" placeholder="Enter Size">
+                                    <div class="error-message inventorysize-error">Invalid size</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Code</label>
+                                    <input type="text" class="form-control inputfont inventorysuppliercode" id="exampleFormControlInput1" placeholder="Enter Supplier Code">
+                                    <div class="error-message inventorysuppliercode-error">Invalid supplier code</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Name</label>
+                                    <input type="text" class="form-control inputfont inventorysuppliername" id="exampleFormControlInput1" placeholder="Enter Supplier Name">
+                                    <div class="error-message inventorysuppliername-error">Invalid supplier name</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Expected Profit</label>
+                                    <input type="text" class="form-control inputfont inventoryexpectedprofit" id="exampleFormControlInput1" placeholder="Enter Expected Profit">
+                                    <div class="error-message inventoryexpectedprofit-error">Invalid expected profit</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between inventorydetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary inventorydatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary inventorydataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success inventorydatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger inventorydataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning inventoryalldataget">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center inventorydetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Inventory Details</h4>
+                                </div>
+                                <table class="table inventorytable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Supplier_Code</th>
+                                        <th scope="col">Supplier_Name</th>
+                                        <th scope="col">Sale(LKR)</th>
+                                        <th scope="col">Buy(LKR)</th>
+                                        <th scope="col">Profit</th>
+                                        <th scope="col">Profit_Margin</th>
+                                        <th scope="col">Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SSM001</th>
+                                        <td>Nike Shoes</td>
+                                        <td>Sport</td>
+                                        <td>10 11 12</td>
+                                        <td>50</td>
+                                        <td>SP001</td>
+                                        <td>Theekshana</td>
+                                        <td>7000.00</td>
+                                        <td>6000.00</td>
+                                        <td>1000.00</td>
+                                        <td>1000.00</td>
+                                        <td>
+                                            <div class="d-flex justify-content-center Istatus">
+                                                <h4>Available</h4>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SSM002</th>
+                                        <td>Nike Shoes</td>
+                                        <td>Sport</td>
+                                        <td>10 11 12</td>
+                                        <td>50</td>
+                                        <td>SP001</td>
+                                        <td>Theekshana</td>
+                                        <td>7000.00</td>
+                                        <td>6000.00</td>
+                                        <td>1000.00</td>
+                                        <td>1000.00</td>
+                                        <td>
+                                            <div class="d-flex justify-content-center Istatus">
+                                                <h4>Available</h4>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center supplierformmaincontainer" style="display: none !important;">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="supplierformtitle">
+                        <h2>Add Supplier</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between supplierdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between supplierdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Code</label>
+                                    <input type="email" class="form-control inputfont suppliercode" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <div class="error-message suppliercode-error">Invalid supplier code</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Name</label>
+                                    <input type="email" class="form-control inputfont suppliername" id="exampleFormControlInput1" placeholder="Enter Name">
+                                    <div class="error-message suppliername-error">Invalid supplier name</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
+                                    <select class="form-select inputfont suppliercategory" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Category</option>
+                                        <option class="selectedfont" value="1">LOCAL</option>
+                                        <option class="selectedfont" value="2">INTERNATIONAL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between supplierdetailssecondcontainer">
+                            <div class="secondtcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Building No</label>
+                                    <input type="email" class="form-control inputfont supplieraddress01" id="exampleFormControlInput1" placeholder="Enter Building No">
+                                    <div class="error-message supplieraddress01-error">Invalid building number</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main State</label>
+                                    <input type="email" class="form-control inputfont supplieraddress04" id="exampleFormControlInput1" placeholder="Enter Main State">
+                                    <div class="error-message supplieraddress04-error">Invalid main state</div>
+                                </div>
+                            </div>
+                            <div class="secondtcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Lane</label>
+                                    <input type="email" class="form-control inputfont supplieraddress02" id="exampleFormControlInput1" placeholder="Enter Lane">
+                                    <div class="error-message supplieraddress02-error">Invalid lane</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Postal Code</label>
+                                    <input type="email" class="form-control inputfont supplieraddress05" id="exampleFormControlInput1" placeholder="Enter Postal Code">
+                                    <div class="error-message supplieraddress05-error">Invalid postal code</div>
+                                </div>
+                            </div>
+                            <div class="secondtcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main City</label>
+                                    <input type="email" class="form-control inputfont supplieraddress03" id="exampleFormControlInput1" placeholder="Enter Main City">
+                                    <div class="error-message supplieraddress03-error">Invalid main city</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Country</label>
+                                    <input type="email" class="form-control inputfont supplieraddress06" id="exampleFormControlInput1" placeholder="Enter Country">
+                                    <div class="error-message supplieraddress06-error">Invalid country</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between supplierdetailsthirdcontainer">
+                            <div class="thirdcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Contact Number</label>
+                                    <input type="email" class="form-control inputfont suppliercontactnumber" id="exampleFormControlInput1" placeholder="Enter Contact Number">
+                                    <div class="error-message suppliercontactnumber-error">Invalid contact number</div>
+                                </div>
+                            </div>
+                            <div class="thirdcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Land Line Number</label>
+                                    <input type="email" class="form-control inputfont supplierlandlinenumber" id="exampleFormControlInput1" placeholder="Enter Land Line Number">
+                                    <div class="error-message supplierlandlinenumber-error">Invalid land line number</div>
+                                </div>
+                            </div>
+                            <div class="thirdcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont supplieremail" id="exampleFormControlInput1" placeholder="Enter Email">
+                                    <div class="error-message supplieremail-error">Invalid email</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between supplierdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary supplierdatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary supplierdataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success supplierdatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger supplierdataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning supplieralldataget">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center supplierdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Supplier Details</h4>
+                                </div>
+                                <table class="table suppliertable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Building_No</th>
+                                        <th scope="col">Lane</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Postal_Code</th>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Contact_Number</th>
+                                        <th scope="col">Land_Line_Number</th>
+                                        <th scope="col">Email</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SP001</th>
+                                        <td>Theekshana</td>
+                                        <td>LOCAL</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>80042 Galle</td>
+                                        <td>Sri-Lanka</td>
+                                        <td>0762656420</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SP002</th>
+                                        <td>Theekshana</td>
+                                        <td>LOCAL</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>80042 Galle</td>
+                                        <td>Sri-Lanka</td>
+                                        <td>0762656420</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center customerformmaincontainer" style="display: none !important;">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="customerformtitle">
+                        <h2>Add Customer</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between customerdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between customerdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Customer Code</label>
+                                    <input type="email" class="form-control inputfont customercode" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <div class="error-message customercode-error">Invalid code</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Join Date</label>
+                                    <input type="date" class="form-control inputfont joindate" id="exampleFormControlInput1" placeholder="Enter Join Date">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Date Of Birth</label>
+                                    <input type="date" class="form-control inputfont customerdob" id="exampleFormControlInput1" placeholder="Enter Date Of Birth">
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Customer Name</label>
+                                    <input type="email" class="form-control inputfont customername" id="exampleFormControlInput1" placeholder="Enter Name">
+                                    <div class="error-message customername-error">Invalid name</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Level</label>
+                                    <select class="form-select inputfont customerlevel" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Level</option>
+                                        <option class="selectedfont" value="1">GOLD</option>
+                                        <option class="selectedfont" value="2">SILVER</option>
+                                        <option class="selectedfont" value="3">BRONZE</option>
+                                        <option class="selectedfont" value="4">NEW</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Gender</label>
+                                    <select class="form-select inputfont customergender" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Gender</option>
+                                        <option class="selectedfont" value="1">MALE</option>
+                                        <option class="selectedfont" value="2">FEMALE</option>
+                                        <option class="selectedfont" value="3">OTHER</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Total Points</label>
+                                    <input type="email" class="form-control inputfont customertotalpoints" id="exampleFormControlInput1" placeholder="Enter Points">
+                                    <div class="error-message customertotalpoints-error">Invalid points</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between customerdetailssecondcontainer">
+                            <div class="secondtcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Building No</label>
+                                    <input type="email" class="form-control inputfont customeraddressline01" id="exampleFormControlInput1" placeholder="Enter Building No">
+                                    <div class="error-message customeraddressline01-error">Invalid building number</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main State</label>
+                                    <input type="email" class="form-control inputfont customeraddressline02" id="exampleFormControlInput1" placeholder="Enter Main State">
+                                    <div class="error-message customeraddressline02-error">Invalid state</div>
+                                </div>
+                            </div>
+                            <div class="secondtcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Lane</label>
+                                    <input type="email" class="form-control inputfont customeraddressline03" id="exampleFormControlInput1" placeholder="Enter Lane">
+                                    <div class="error-message customeraddressline03-error">Invalid lane</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Postal Code</label>
+                                    <input type="email" class="form-control inputfont customeraddressline04" id="exampleFormControlInput1" placeholder="Enter Postal Code">
+                                    <div class="error-message customeraddressline04-error">Invalid postal code</div>
+                                </div>
+                            </div>
+                            <div class="secondtcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main City</label>
+                                    <input type="email" class="form-control inputfont customeraddressline05" id="exampleFormControlInput1" placeholder="Enter Main City">
+                                    <div class="error-message customeraddressline05-error">Invalid city</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between customerdetailsthirdcontainer">
+                            <div class="thirdcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Contact Number</label>
+                                    <input type="email" class="form-control inputfont customercontactno" id="exampleFormControlInput1" placeholder="Enter Contact Number">
+                                    <div class="error-message customercontactno-error">Invalid contact number</div>
+                                </div>
+                            </div>
+                            <div class="thirdcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont customeremail" id="exampleFormControlInput1" placeholder="Enter Email">
+                                    <div class="error-message customeremail-error">Invalid email address</div>
+                                </div>
+                            </div>
+                            <div class="thirdcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Recent Purchase Date</label>
+                                    <input type="date" class="form-control inputfont customerrecentpurchasedatetime" id="exampleFormControlInput1" placeholder="Enter Recent Purchase Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between customerdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary customerdatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary customerdataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success customerdatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger customerdataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning customeralldataget">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center customerdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Customer Details</h4>
+                                </div>
+                                <table class="table customertable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Join_Date</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Points</th>
+                                        <th scope="col">Date_of_Birth</th>
+                                        <th scope="col">Building_No</th>
+                                        <th scope="col">Lane</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Contact_Number</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Recent_Purchase_Date</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">CU001</th>
+                                        <td>Theekshana</td>
+                                        <td>MALE</td>
+                                        <td>05-15-2024</td>
+                                        <td>GOLD</td>
+                                        <td>1000.00</td>
+                                        <td>05-05-2003</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                        <td>05-15-2024</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">CU002</th>
+                                        <td>Theekshana</td>
+                                        <td>MALE</td>
+                                        <td>05-15-2024</td>
+                                        <td>GOLD</td>
+                                        <td>1000.00</td>
+                                        <td>05-05-2003</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                        <td>05-15-2024</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center saleformmaincontainer" style="display: none !important;">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="saleformtitle">
+                        <h2>Add Sales</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between salesdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between salesdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Order No</label>
+                                    <input type="email" class="form-control inputfont saleorderno" id="exampleFormControlInput1" placeholder="Enter Order No">
+                                    <div class="error-message saleorderno-error">Invalid order number</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Total Price</label>
+                                    <input type="text" class="form-control inputfont saletotalprice" id="exampleFormControlInput1" placeholder="Enter Total Price">
+                                    <div class="error-message saletotalprice-error">Invalid total price</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Added Points</label>
+                                    <input type="text" class="form-control inputfont salepoints" id="exampleFormControlInput1" placeholder="Enter Added Points">
+                                    <div class="error-message salepoints-error">Invalid added points</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Customer Name</label>
+                                    <input type="email" class="form-control inputfont salecustomername" id="exampleFormControlInput1" placeholder="Enter Customer Name">
+                                    <div class="error-message salecustomername-error">Invalid customer name</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Purchase Date</label>
+                                    <input type="date" class="form-control inputfont salepurchasedate" id="exampleFormControlInput1" placeholder="Enter Purchase Date">
+                                    <div class="error-message salepurchasedate-error">Invalid purchase date</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Cashier Name</label>
+                                    <input type="text" class="form-control inputfont salecashiername" id="exampleFormControlInput1" placeholder="Enter Cashier Name">
+                                    <div class="error-message salecashiername-error">Invalid cashier name</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Payement Method</label>
+                                    <select class="form-select inputfont salepayementmethod" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Method</option>
+                                        <option class="selectedfont" value="1">CASH</option>
+                                        <option class="selectedfont" value="2">CARD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9 d-flex flex-wrap align-items-center justify-content-between salesdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary saledatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary saledataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success saledatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger saledataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning salealldataget">Get All</button>
+                            <button type="button" class="btn btn-outline-info saleitmadd">Add Item</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center salesdetailsfifthcontainer">
+                            <div class="col-11 saledetailstablecontainer">
+                                <div>
+                                    <h4>Sales Details</h4>
+                                </div>
+                                <table class="table saletable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Order_No</th>
+                                        <th scope="col">Customer_Name</th>
+                                        <th scope="col">Item_Desc</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Unit_Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Total_Price</th>
+                                        <th scope="col">Purchase_Date</th>
+                                        <th scope="col">Payement</th>
+                                        <th scope="col">Points</th>
+                                        <th scope="col">Cashier_Name</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SA001</th>
+                                        <td>OR001</td>
+                                        <td>Kasun</td>
+                                        <td>Nike Shoes</td>
+                                        <td>10</td>
+                                        <td>5000.00</td>
+                                        <td>1</td>
+                                        <td>5000.00</td>
+                                        <td>05-15-2024</td>
+                                        <td>CARD</td>
+                                        <td>10</td>
+                                        <td>Theekshana</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SA002</th>
+                                        <td>OR002</td>
+                                        <td>Kasun</td>
+                                        <td>Nike Shoes</td>
+                                        <td>10</td>
+                                        <td>5000.00</td>
+                                        <td>1</td>
+                                        <td>5000.00</td>
+                                        <td>05-15-2024</td>
+                                        <td>CARD</td>
+                                        <td>10</td>
+                                        <td>Theekshana</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-11 saleitemquetablecontainer" style="display: none;">
+                                <div>
+                                    <h4>Item Que</h4>
+                                </div>
+                                <table class="table saleitemtable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Item_Desc</th>
+                                        <th scope="col">Unit_Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Remove</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center userformmaincontainer" style="display: none !important;">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="userformtitle">
+                        <h2>Add User</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between userdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between userdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont useremail" id="exampleFormControlInput1" placeholder="Enter Email">
+                                    <div class="error-message useremail-error">Invalid email address</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Password</label>
+                                    <input type="email" class="form-control inputfont userpassword" id="exampleFormControlInput1" placeholder="Enter Password">
+                                    <div class="error-message userpassword-error">Invalid password</div>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Role</label>
+                                    <select class="form-select inputfont userrole" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Role</option>
+                                        <option class="selectedfont" value="1">USER</option>
+                                        <option class="selectedfont" value="2">ADMIN</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between userdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary userdatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary userdataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success userdatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger userdataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning useralldataget">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center userdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>User Details</h4>
+                                </div>
+                                <table class="table usertable">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Password</th>
+                                        <th scope="col">Role</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">TheekshanaDeSilva21@gmail.com</th>
+                                        <td>1234@Theek</td>
+                                        <td>ADMIN</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">HirushaNavod21@gmail.com</th>
+                                        <td>1234@Hiru</td>
+                                        <td>ADMIN</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">ManithLakvindu21@gmail.com</th>
+                                        <td>1234@Mani</td>
+                                        <td>ADMIN</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 profilechangemaincontainer" style="display: none;">
+            <div class="col-5 profilechnagedbox">
+                <div class="col-12 profilechnagedboxheader d-flex align-items-center justify-content-end">
+                    <button class="profilechangedbocclosebtn">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center profilechnagedboxbody">
+                    <div class="profilechnagedboxinnerbody d-flex flex-wrap">
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="imagepreview">
+                                <img src="assets/img/DashBoard/default_men_profile_pictures.png" alt="profile">
+                            </div>
+                            <input type="file" class="fileinput" accept="image/*">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </div>
+                            <button type="button" class="btn btn-primary profilepicuploadbtn">Upload New Photo</button>
+                            <div class="profpicdetailscontainer">
+                                <h5 class="align-self-end">Upload a new avatar.Larger image will be resized automatically.</h5>
+                                <h5 class="align-self-end">Maximum upload size is 1MB</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center align-items-center profilechnagedboxinnerbodysecondpart">
+                            <div class="col-10">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label profilelabelfont">Email</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter New Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label profilelabelfont">Password</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter New Password">
+                                </div>
+                                <button type="button" class="align-self-center btn btn-danger profilepicupdatebtn">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex flex-wrap justify-content-center align-items-center inventoryformpopupmaincontainer" style="display: none !important;">
+            <div class="col-5 d-flex flex-wrap justify-content-center">
+                <div class="col-12 inventorypopupformheader d-flex align-items-center justify-content-end">
+                    <button class="inventorypopupformclosebtn">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between inventorypopupformbody">
+                    <div class="firstcontainerfirstpart">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label labelfont">Occasion</label>
+                            <select class="form-select inputfont occasion" aria-label="Default select example">
+                                <option class="selectedfont" selected>Select Occasion</option>
+                                <option class="selectedfont" value="1">FORMAL</option>
+                                <option class="selectedfont" value="2">CASUAL</option>
+                                <option class="selectedfont" value="3">INDUSTRIAL</option>
+                                <option class="selectedfont" value="4">SPORT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="firstcontainersecondpart">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label labelfont">Verities</label>
+                            <select class="form-select inputfont shoeverities" aria-label="Default select example">
+                                <option class="selectedfont" selected>Select Verities</option>
+                                <option class="selectedfont" value="1">HEEL</option>
+                                <option class="selectedfont" value="2">FLATS</option>
+                                <option class="selectedfont" value="3">WEDGES</option>
+                                <option class="selectedfont" value="4">FLIP FLOPS</option>
+                                <option class="selectedfont" value="5">SANDALS</option>
+                                <option class="selectedfont" value="6">SHOES</option>
+                                <option class="selectedfont" value="7">SLIPPERS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="firstcontainerthirdpart">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
+                            <select class="form-select inputfont inventorycategory" aria-label="Default select example">
+                                <option class="selectedfont" selected>Select Category</option>
+                                <option class="selectedfont" value="1">MALE</option>
+                                <option class="selectedfont" value="2">FEMALE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="firstcontainerforthdpart">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label labelfont">Verities</label>
+                            <select class="form-select inputfont otherverities" aria-label="Default select example">
+                                <option class="selectedfont" selected>Select Verities</option>
+                                <option class="selectedfont" value="1">SHOE SHAMPOO</option>
+                                <option class="selectedfont" value="2">POLISH BLACK</option>
+                                <option class="selectedfont" value="3">POLISH BROWN</option>
+                                <option class="selectedfont" value="4">POLISH DARK BROWN</option>
+                                <option class="selectedfont" value="5">FULL-SOCKS</option>
+                                <option class="selectedfont" value="6">HALF-SOCKS</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 inventorypopupformbuttoncontainer">
+                            <div class="col-12 d-flex flex-wrap justify-content-end">
+                                <button type="button" class="btn btn-outline-primary inventorypopupbtn">ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex flex-wrap justify-content-center align-items-center inventoryaddpopupform" style="display: none !important;">
+            <div class="col-12 d-flex flex-wrap justify-content-end inventoryaddpopupformheader">
+                <button class="inventoryaddpopupformclosebtn">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between inventoryaddpopupformbody">
+                <div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label labelfont">Item Code</label>
+                        <input type="email" class="form-control inputfont saleitemcode" id="exampleFormControlInput1" placeholder="Enter Code">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label labelfont">Item QTY</label>
+                        <input type="text" class="form-control inputfont saleitemqty" id="exampleFormControlInput1" placeholder="Enter Item QTY">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label labelfont">Unit Price</label>
+                        <input type="email" class="form-control inputfont saleunitprice" id="exampleFormControlInput1" placeholder="Enter Unit Price">
+                    </div>
+                    <div class="d-flex inventoryaddpopupformbtncontainer">
+                        <button type="button" class="btn btn-outline-primary saleinventoryaddsave">Add Item</button>
+                        <button type="button" class="btn btn-outline-warning saleinventoryaddupdate" style="display: none;">Update Item</button>
+                        <button type="button" class="btn btn-outline-danger saleinventoryaddfieldclear">Clear</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label labelfont">Item Description</label>
+                        <input type="text" class="form-control inputfont saleitemdescription" id="exampleFormControlInput1" placeholder="Enter Item Desc">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label labelfont">Size</label>
+                        <input type="text" class="form-control inputfont saleitemsize" id="exampleFormControlInput1" placeholder="Enter Size">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex flex-wrap justify-content-center align-items-center notificationmaincontainer" style="display: none !important;">
+            <div class="col-4 d-flex flex-wrap justify-content-center notificationinnercontainer">
+                <div class="col-12 notificationcontainerheader d-flex align-items-center justify-content-end">
+                    <button class="notificationcontainerclosebtn">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-11 d-flex flex-wrap notificationcontainertitle">
+                    <img src="assets/img/DashBoard/notification.png" alt="">
+                    <h4>New Notification</h4>
+                </div>
+                <div class="col-11 notificationcontainerbody">
+                    <div class="col-9 d-flex flex-wrap messageconatiner">
+                        <div class="col-12 d-flex flex-wrap justify-content-between messagetittle">
+                            <div class="d-flex flex-wrap messagetitleleftside">
+                                <img src="assets/img/LoginForm/logoicon.png" alt="">
+                                <h4>Message</h4>
+                            </div>
+                            <div class="d-flex flex-wrap messagetitlerightside">
+                                <h4>07.00 P.M</h4>
+                                <button class="notificationclosebtn">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap align-items-center messagebody">
+                            <h4>Hello World !</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 paymentdatacontainer" style="display: none;">
+            <h2 class="paymenttitle">Settings</h2>
+            <h3 class="paymentsubtitle">Payment</h3>
+            <button class="paymentpagecclosebtn">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+
+            <div class="saved-cards">
+                <h4>Saved cards:</h4>
+                <div class="card">
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+                        <span>**** **** **** 3193</span>
+                    </div>
+                    <span class="remove">Remove card</span>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                        <span>**** **** **** 4296</span>
+                    </div>
+                    <span class="remove">Remove card</span>
+                </div>
+            </div>
+        
+            <h4>Add new card:</h4>
+            <form>
+                <div class="paymentform-group">
+                    <label class="paymentlabel" for="name">Cardholder's Name</label>
+                    <input class="paymentinput" type="text" id="name" placeholder="Anna Doe" required>
+                </div>
+                <div class="paymentform-group">
+                    <label class="paymentlabel" for="cardnumber">Card Number</label>
+                    <input class="paymentinput" type="text" id="cardnumber" placeholder="1234 5678 1234 5678" required>
+                </div>
+                <div class="paymentform-group paymentrow">
+                    <div class="paymentcol-half">
+                        <label class="paymentlabel" for="expiry">Expire</label>
+                        <input class="paymentinput" type="text" id="expiry" placeholder="MM/YY" required>
+                    </div>
+                    <div class="paymentcol-half">
+                        <label class="paymentlabel" for="cvv">Cvv</label>
+                        <input class="paymentinput" type="text" id="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <button type="submit" class="addcardbtn">ADD CARD</button>
+            </form>
+        </div>
+    </main>
+    <script src="assets/script/jquery-3.7.1.min.js"></script>
+    <script src="assets/script/dashboard/DashBoard.js"></script>
+    <script src="assets/script/employeeform/EmployeeForm.js"></script>
+    <script src="assets/script/inventoryform/InventoryForm.js"></script>
+    <script src="assets/script/customerform/CustomerForm.js"></script>
+    <script src="assets/script/supplierForm/SupplierForm.js"></script>
+    <script src="assets/script/userform/UserForm.js"></script>
+    <script src="assets/script/saleform/SaleForm.js"></script>
+    <script src="assets/script/paymentform/PaymentForm.js"></script>
+    <!--Ajax Script For Communicate With Server.-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="ajax/login/Login.js"></script>
+    <script src="ajax/GlobalAttr.js"></script>
+    <script src="ajax/customer/Customer.js"></script>
+    <script src="ajax/employee/Employee.js"></script>
+    <script src="ajax/supplier/Supplier.js"></script>
+    <script src="ajax/user/User.js"></script>
+    <script src="ajax/inventory/Inventory.js"></script>
+    <script src="ajax/sale/Sale.js"></script>
+    <script src="ajax/dashboardajax/DashBoardAjax.js"></script>
+    <!--Validation Script For Check Field.-->
+    <script src="validation/allform/AllValidation.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+</html>

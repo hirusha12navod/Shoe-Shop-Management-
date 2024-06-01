@@ -1,0 +1,646 @@
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+  }
+
+header{
+    position: absolute;
+    right: 0%;
+    width: 80vw;
+    height: 10vh;
+    background-color: #f6f9fe;
+}
+
+.searchicon{
+    color: gray;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.searchside{
+    width: 150px;
+}
+
+.profilepictures>button{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 0px;
+    position: relative;
+    background-color: green;
+}
+
+.profilepictures>button>img{
+    position: relative;
+    height: inherit;
+    width: inherit;
+}
+
+.notification>img{
+    width: 25px;
+}
+
+.taptosearch{
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: small;
+    margin-top: 3px;
+    color: black;
+    cursor: pointer;
+}
+
+.profilepictures{
+    width: 200px;
+    height: 40px;
+}
+
+.profiledetails{
+    height: 35px;
+    width: 150px;
+}
+
+.profiledetails>h5:nth-child(1){
+    font-family: "Dongle", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 0.5;
+}
+
+.profiledetails>h5:nth-child(2){
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: small;
+}
+
+.headerightside{
+    width: 250px;
+}
+
+/*Dash Board Left Side*/
+
+.leftside{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 20vw;
+    height: 100vh;
+    background-color: #f6f9fe;
+}
+
+.mylogo>img{
+    width: 80px;
+}
+
+.mylogo>h5{
+    font-family: "Concert One", cursive;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.leftsidemaindiv{
+    height: 90vh;
+}
+
+.menubuttoncontainer>button>i{
+    width: 25px;
+    height: 20px;
+}
+
+.menubuttoncontainer>button{
+    font-family: "Dongle", cursive;
+    font-size: 23px;
+    font-weight: 550;
+    color: #5c5c5c;
+}
+
+.menubuttoncontainer>button:hover{
+    background-color: rgb(15, 83, 255);
+    color: white;
+}
+
+.menubuttoncontainer>button>i{
+    margin-right: 20px;
+}
+
+.menubuttoncontainer>button>div{
+    width: 40px;
+    margin-right: 50px;
+}
+
+.homebutton{
+    margin-top: 60px;
+}
+
+.menubuttoncontainer>button:last-child{
+    margin-top: 150px;
+}
+
+/*Dash Board Right Side*/
+.rightside{
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    width: 80vw;
+    height: 90vh;
+    background-color: #f6f9fe;
+}
+
+.rightsidemaincontainer{
+    height: 100%;
+}
+
+.managedetails{
+    width: 95%;
+    height: 20%;
+    border-radius: 13px;
+    background-color: white;
+}
+
+.managedetails>div{
+    height: 80%;
+    border-right: 1px solid rgb(157, 157, 157);
+}
+
+.managedetails>div:last-child{
+    border-right: 0px;
+}
+
+.managedetails>div>div{
+    margin-top: 10px;
+}
+
+.managedetails>div>div>img{
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.managedetails>div>div>h5{
+    font-family: "Dongle", cursive;
+    font-size: 30px;
+    font-weight: 550;
+    color: rgb(52, 52, 52);
+    margin-left: 20px;
+    height: 20px;
+}
+
+.revenuedetails>div{
+    height: 40px;
+    background-color: white;
+    margin-left: 90px;
+}
+
+.revenuedetails>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 45px;
+    font-weight: 550;
+    color: rgb(52, 52, 52);
+}
+
+.revenuedetails>div:nth-child(1)>h4:nth-child(1){
+    color: #8a8a8a;
+}
+
+.revenuedetails>div:nth-child(1)>h4:nth-child(2){
+    margin-left: 6px;
+}
+
+.revenuedetails>div:nth-child(2)>i:nth-child(2){
+    display: none;
+}
+
+.revenuedetails>div:nth-child(2){
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.employeedetails>div , .supplierdetails>div , .loyalatydetails>div{
+    width: fit-content;
+    background-color: white;
+    height: 40px;
+    margin-left: 90px;
+}
+
+.employeedetails>div:nth-child(1)>h4 , .supplierdetails>div:nth-child(1)>h4 , .loyalatydetails>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 45px;
+    font-weight: 550;
+    color: rgb(52, 52, 52);
+}
+
+.employeedetails>div:nth-child(2)>i:last-child , .supplierdetails>div:nth-child(2)>i:last-child {
+    display: none;
+}
+
+.loyalatydetails>div:nth-child(2)>i:nth-child(2){
+    display: none;
+}
+
+.employeedetails>div:nth-child(2)>h4 , .supplierdetails>div:nth-child(2)>h4 , .loyalatydetails>div:nth-child(2)>h4{
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.employeedetails>div:nth-child(2) , .supplierdetails>div:nth-child(2) , .loyalatydetails>div:nth-child(2){
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.loyalatydetails>div:nth-child(2){
+    color: rgb(166, 0, 11);
+    background-color: rgba(254, 65, 93, 0.208);
+}
+
+.chartanddetailscontainer{
+    width: 95%;
+    height: 50%;
+    margin-top: 20px;
+}
+
+.chartanddetailscontainer>div:nth-child(2){
+    width: 30%;
+}
+
+.chartanddetailscontainer>div{
+    border-radius: 13px;
+}
+
+/**/
+
+.chart{
+    background-color: white;
+}
+
+.chart>div{
+    margin-top: 20px;
+    height: 80%;
+}
+
+.chart>div>h4{
+    font-family: "Dongle", cursive;
+    font-size: 25px;
+    font-weight: 550;
+    color: #5c5c5c;
+}
+
+.chart>div>div:nth-child(2)>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 40px;
+    font-weight: 550;
+}
+
+.chart>div>div:nth-child(2)>div:nth-child(1)>h4:nth-child(1){
+    margin-right: 7px;
+    color: #8a8a8a;
+}
+
+.chart>div>div:nth-child(2)>div:nth-child(1){
+    position: relative;
+    bottom: 10px;
+}
+
+/**/
+.mostsaleshoedetails{
+    position: relative;
+    overflow: hidden;
+}
+
+.mostsaleshoedetails>div>img{
+    width: 100%;
+    height: 100%;
+}
+
+.mostsaleshoedetails>div>div>img:nth-child(2){
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    width: 300px;
+    height: 230px;
+}
+
+.mostsaleshoedetails>div>div>img:nth-child(1){
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100px;
+    height: 80px;
+}
+
+.shoedetails>div{
+    margin-top: 20px;
+    height: 310px;
+    display: none;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.shoedetails>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.shoedetails>div>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.shoedetails>div>table:nth-child(2)>thead>tr>th{
+    font-size: 21px;
+    font-family: "Dongle", sans-serif;
+    color: #8a8a8a;
+}
+
+.shoedetails>div>table:nth-child(2)>tbody>tr>th, .shoedetails>div>table:nth-child(2)>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 23px;
+}
+
+/**/
+
+.employeeandsupplierdetailscontainer{
+    width: 95%;
+    height: 23%;
+    margin-top: 20px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.employeeandsupplierdetailscontainer>div{
+    border-radius: 13px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.employeeandsupplierdetailscontainer>div:nth-child(2){
+    margin-left: 40px;
+    width: 63%;
+    background-color: white;
+}
+
+.employeeandsupplierdetailscontainer>div>div{
+    
+}
+
+/**/
+.birthdaydetailscontainer{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.birthdaydetailscontainer>h4:nth-child(1){
+    margin-bottom: 20px;
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.employeecontainer>div>div>div:nth-child(1){
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.employeecontainer>div>div>div:nth-child(1)>img{
+    width: inherit;
+    height: inherit;
+}
+
+.spaceline{
+    height: 60px;
+    border-left: 2px solid rgb(157, 157, 157);
+    margin-left: 17px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.daytoday{
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-top: 10px;
+}
+
+.daytoday>h4{
+    font-family: "Dongle", cursive;
+    font-size: 20px;
+    font-weight: 550;
+    height: 10px;
+}
+
+.birthdaydetails>h4:nth-child(1){
+    font-family: "Dongle", cursive;
+    font-size: 30px;
+    font-weight: 550;
+    height: 17px;
+}
+
+.birthdaydetails>h4:nth-child(2){
+    font-family: "Dongle", cursive;
+    font-size: 25px;
+    font-weight: 550;
+    color: rgb(53, 53, 53);
+}
+
+.birthdaydetails{
+    margin-left: 10px;
+}
+
+.tablecontainer{
+    margin-top: 35px;
+}
+
+.tableheader{
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.tableheader>h4{
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.tablecontainer>table>thead>tr>th{
+    font-size: 21px;
+    font-family: "Dongle", sans-serif;
+    color: #8a8a8a;
+}
+
+.tablecontainer>table>tbody>tr>th , .tablecontainer>table>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+}
+
+.status>div{
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+}
+
+.status>div>h4{
+    font-family: "Dongle", cursive;
+    font-size: 18px;
+    font-weight: 550;
+    height: 10px;
+}
+
+.barchartcontainer{
+    position: relative;
+    height: 70%;
+}
+
+.notificationmaincontainer{
+    position: absolute;
+    height: 100vh;
+    background-color: rgba(59, 59, 59, 0.474);
+}
+
+.notificationinnercontainer{
+    position: relative;
+    height: 70vh;
+    overflow: scroll;
+    background-color: #f6f9fe;
+    border-radius: 10px;
+}
+
+.notificationcontainerheader{
+    height: 30px;
+}
+
+.notificationcontainerheader>button{
+    background-color: transparent;
+    border: 0px;
+}
+
+.notificationcontainertitle{
+    position: absolute;
+    height: 50px;
+    top: 5%;
+    border-bottom: 1px solid gray;
+}
+
+.notificationcontainertitle>img{
+    width: 40px;
+    height: 40px;
+}
+
+.notificationcontainertitle>h4{
+    margin-top: 6px;
+    margin-left: 5px;
+    font-family: "Concert One", cursive;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.notificationcontainerbody{
+    position: absolute;
+    top: 18%;
+    height: fit-content;
+}
+
+.messageconatiner{
+    background-color: white;
+    height: fit-content;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 8px;
+}
+
+.messagetitleleftside{
+    margin-left: 5px;
+}
+
+.messagetitleleftside>img{
+    width: 25px;
+    height: 30px;
+}
+
+.messagetitleleftside>h4{
+    font-family: "Dongle", cursive;
+    font-size: 27px;
+    margin-left: 5px;
+}
+
+.messagetitlerightside{
+    margin-top: 5px;
+}
+
+.messagetitlerightside>h4{
+    font-family: "Dongle", cursive;
+    font-size: 20px;
+    margin-left: 5px;
+    color: gray;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.messagetitlerightside>button>i{
+    color: gray;
+}
+
+.messagetitlerightside>button{
+    height: 25px;
+    border: 0px;
+    background-color: transparent;
+    bottom: 25px;
+}
+
+.messagetittle{
+    margin-top: 5px;
+    height: 35px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+}
+
+.messagebody{
+    height: 40px;
+}
+
+.messagebody>h4{
+    font-family: "Dongle", cursive;
+    font-size: 25px;
+    margin-left: 8px;
+}
+
+.notification{
+    cursor: pointer;
+}

@@ -1,0 +1,76 @@
+.salesdetailsmaincontainer{
+    position: relative;
+    width: 97%;
+    height: 750px;
+    margin-bottom: 200px;
+}
+
+.salesdetailsfirstcontainer{
+    height: 300px;
+}
+
+.salesdetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+    position: relative;
+    width: 100%;
+}
+
+/*------------------------------------*/
+
+.inventoryaddpopupform{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto;
+    height: 55%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+.inventoryaddpopupformbody{
+    position: relative;
+    width: 95%;
+    height: 95%;
+}
+
+.inventoryaddpopupformbody>div{
+    width: calc(95%/2);
+}
+
+.saleinventoryaddsave,.saleinventoryaddupdate{
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    width: 200px;
+    line-height: 0px;
+    height: 40px;
+}
+
+.saleinventoryaddfieldclear{
+    margin-left: 10px;
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    width: 130px;
+    line-height: 0px;
+    height: 40px;
+}
+
+.inventoryaddpopupformclosebtn{
+    background-color: transparent;
+    border: 0px;
+}
+
+.inventoryaddpopupformbtncontainer{
+    margin-top: 45px;
+    width: 500px;
+}
+
+.saleitemrowremove{
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    background-color: transparent;
+}

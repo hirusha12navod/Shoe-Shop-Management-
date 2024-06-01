@@ -1,0 +1,212 @@
+/*-------------------------------Employee Form----------------------------------*/
+
+.employeeformmaincontainer,.inventoryformmaincontainer,.supplierformmaincontainer,.customerformmaincontainer,.saleformmaincontainer,.userformmaincontainer{
+    height: 90vh;
+}
+
+.employeeformmaincontainer>div,.inventoryformmaincontainer>div,.supplierformmaincontainer>div,.customerformmaincontainer>div,.saleformmaincontainer>div,.userformmaincontainer>div{
+    position: relative;
+    height: 97%;
+    width: 97%;
+    border-radius: 15px;
+    overflow: scroll;
+    border: 1px solid #c7c7c7;
+    background-color: transparent;
+}
+
+.emplyoeeformtitle,.inventoryformtitle,.supplierformtitle,.customerformtitle,.saleformtitle,.userformtitle{
+    position: relative;
+    height: 50px;
+    width: 97%;
+}
+
+.emplyoeeformtitle>h2,.inventoryformtitle>h2,.supplierformtitle>h2,.customerformtitle>h2,.saleformtitle>h2,.userformtitle>h2{
+    font-family: "Concert One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #5c5c5c;
+    margin-left: 15px;
+}
+
+.emplyoeeformtitle>div,.inventoryformtitle>div,.supplierformtitle>div,.customerformtitle>div,.saleformtitle>div,.userformtitle>div{
+    border-radius: 100%;
+    border-bottom: 1px solid #5c5c5c;
+}
+
+.employeedetailsmaincontainer{
+    position: relative;
+    width: 97%;
+    height: 1370px;
+    margin-bottom: 200px;
+}
+
+.employeedetailsfirstcontainer{
+    height: 400px;
+}
+
+#image-preview,#inventory-image-preview {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius:10px;
+  }
+  
+  #image-preview img,#inventory-image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  #file-input,#inventory-file-input,.fileinput {
+    display: none;
+  }
+
+  #image-preview>.employeedefaultimg,#inventory-image-preview>.inventorydefaultimg{
+    width: 60px;
+  }
+
+  .employeedetailsfirstcontainer>div,.inventorydetailsfirstcontainer>div,.supplierdetailsfirstcontainer>div,.customerdetailsfirstcontainer>div,.salesdetailsfirstcontainer>div,.userdetailsfirstcontainer>div{
+    position: relative;
+    height: 100%;
+    width: calc(95%/3);
+  }
+
+  .inputfont{
+    font-family: "Dongle", cursive;
+    font-size: 23px !important;
+    height: 50px !important;
+    border-radius: 4px;
+    border: 1px solid rgb(122, 121, 121);
+  }
+
+  .inputfont>.selectedfont{
+    font-family: "Dongle", cursive;
+    font-size: 13px !important;
+  }
+
+  .firstcontainersecondpart>div:nth-child(2),.firstcontainersecondpart>div:nth-child(3),.firstcontainersecondpart>div:nth-child(4){
+    margin-top: 16px;
+  }
+
+  .firstcontainerthirdpart>div:nth-child(2),.firstcontainerthirdpart>div:nth-child(3),.firstcontainerthirdpart>div:nth-child(4){
+    margin-top: 16px;
+  }
+
+  .firstcontainerfirstpart>div:nth-child(2),.firstcontainerfirstpart>div:nth-child(3){
+    margin-top: 3px;
+  }
+
+  .labelfont{
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    height: 25px;
+  }
+
+  .employeedetailssecondcontainer,.employeedetailsthirdcontainer{
+    height: 250px;
+  }
+
+  .employeedetailssecondcontainer>div,
+  .employeedetailsthirdcontainer>div,
+  .supplierdetailssecondcontainer>div,
+  .supplierdetailsthirdcontainer>div,
+  .customerdetailssecondcontainer>div,
+  .customerdetailsthirdcontainer>div{
+    position: relative;
+    height: 100%;
+    width: calc(95%/3);
+  }
+
+  .employeedetailsforthcontainer,.inventorydetailsforthcontainer,.supplierdetailsforthcontainer,.customerdetailsforthcontainer,.salesdetailsforthcontainer,.userdetailsforthcontainer{
+    height: 70px;
+  }
+
+  .employeedetailsfifthcontainer,.inventorydetailsfifthcontainer,.customerdetailsfifthcontainer,.salesdetailsfifthcontainer,.userdetailsfifthcontainer{
+    height: 350px;
+  }
+
+  .employeedetailsforthcontainer>button,.inventorydetailsforthcontainer>button,.supplierdetailsforthcontainer>button,.customerdetailsforthcontainer>button,.salesdetailsforthcontainer>button,.userdetailsforthcontainer>button{
+    height: 40px;
+    width: 120px;
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    line-height: 20px;
+  }
+
+  .employeedetailsforthcontainer>button:hover,.inventorydetailsforthcontainer>button:hover,.supplierdetailsforthcontainer>button:hover,.customerdetailsforthcontainer>button:hover,.salesdetailsforthcontainer>button:hover,.userdetailsforthcontainer>button:hover{
+    color: white;
+  }
+
+  .employeedetailsfifthcontainer,.inventorydetailsfifthcontainer,.supplierdetailsfifthcontainer,.customerdetailsfifthcontainer,.salesdetailsfifthcontainer,.userdetailsfifthcontainer{
+    overflow: scroll;
+    border: 1px solid #757474;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  /*-----------------------------*/
+
+  .employeedetailsfifthcontainer>div,.inventorydetailsfifthcontainer>div,.supplierdetailsfifthcontainer>div,.customerdetailsfifthcontainer>div,.salesdetailsfifthcontainer>div,.userdetailsfifthcontainer>div{
+    margin-top: 20px;
+    height: 310px;
+    overflow: scroll;
+   }
+
+.employeedetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+    position: relative;
+    width: 1580px;
+}
+
+.employeedetailsfifthcontainer>div>div:nth-child(1)>h4,
+.inventorydetailsfifthcontainer>div>div:nth-child(1)>h4,
+.supplierdetailsfifthcontainer>div>div:nth-child(1)>h4,
+.customerdetailsfifthcontainer>div>div:nth-child(1)>h4,
+.salesdetailsfifthcontainer>div>div:nth-child(1)>h4,
+.userdetailsfifthcontainer>div>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.employeedetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.inventorydetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.supplierdetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.customerdetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.salesdetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.userdetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th{
+    font-size: 21px;
+    font-family: "Dongle", sans-serif;
+    color: #8a8a8a;
+}
+
+.employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td,
+.supplierdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.supplierdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td,
+.customerdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.customerdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td,
+.salesdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.salesdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td,
+.userdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.userdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 23px;
+}
+
+.error-message {
+  color: red;
+  display: none;
+  font-family: "Dongle", sans-serif;
+  font-size: 1.3em;
+  height: 0px;
+}
+.error-border {
+  border-color: red;
+}
