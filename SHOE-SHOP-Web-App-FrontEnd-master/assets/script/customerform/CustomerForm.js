@@ -78,6 +78,7 @@ function dataToCustomerTable(customer){
     $(".customertable").append(row);
     let Today = isDateToday(customer.dob);
     if(Today){
+        console.log("Methana")
         sendEmail(customer.email,customer.customerName);
     }
 }
